@@ -131,3 +131,40 @@ render (){
   )
 }
 
+//Desenvolva um contador que tenha as seguintes funcionalidades:
+//1 - O contador não pode chegar abaixo de 0
+//2 - O contador não pode chegar acima de 10
+
+import React, { Component } from "react";
+
+export default class App extends Component {
+state ={
+  cont: 0
+}
+
+adicionar = () => {
+  if (this.state.cont <10){
+    this.setState({
+      cont:this.state.cont +1
+    })
+  }
+}
+
+diminuir = () =>{
+  if (this.state.cont <10){
+    this.setState({
+      cont:this.state.cont -1
+    })
+  }
+}
+
+render(){
+  return(
+    <div className='container'>
+      <h1 className='titulo'>Contador</h1>
+      <h2 className='cont'>{this.state.cont}</h2>
+      <button className="first-button" onClick={this.adicionar}>+</button>
+      <button className="second-button" onClick={this.retirar}>-</button>
+    </div>
+  )
+}
