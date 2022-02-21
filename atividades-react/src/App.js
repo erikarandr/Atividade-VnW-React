@@ -76,3 +76,58 @@ export default class App extends Component {
     );
   }
 }
+
+//Crie um component de class
+
+
+//Crie um array de objetos no STATE com pelo menos 6 objetos
+
+
+//Faça um map do seu state e exiba os dados na tela
+
+import React, { Component } from "react";
+
+export default class App extends Component {
+state ={
+  dados: [{
+    nome: "Erika",
+    telefone: 99999-9999,
+  },
+  {
+    nome: "Ana",
+    telefone: 99999-9999,
+
+  }
+  {
+    nome: "Paulo",
+    telefone: 99999-9999,
+  }
+  {
+    nome: "Fred",
+    telefone: 99999-9999,
+  }
+  {
+    nome: "Nat",
+    telefone: 99999-9999,
+  }
+  {
+    nome: "Pedro",
+    telefone: 99999-9999,
+  }
+
+  ]
+}
+
+render (){
+  return(
+    <div>
+      {this.state.dados.map((item) => (
+        <div>
+          <p>Nome:{item.nome}</p>
+          <p>Tel:{item.telefone} </p>
+          </div>
+      ))}
+    </div>
+  )
+}
+
